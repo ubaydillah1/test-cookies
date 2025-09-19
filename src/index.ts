@@ -14,8 +14,8 @@ app.use(
 app.get("/", (req: Request, res: Response) => {
   res.cookie("token", "123456", {
     httpOnly: true,
-    sameSite: "none",
-    secure: true,
+    sameSite: "lax",
+    secure: false,
   });
 
   res.json({ message: "Cookies Set" });
