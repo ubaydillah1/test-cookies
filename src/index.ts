@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -14,8 +14,8 @@ app.use(
 app.get("/", (req: Request, res: Response) => {
   res.cookie("token", "123456", {
     httpOnly: true,
-    sameSite: "lax",
-    secure: false,
+    sameSite: "none",
+    secure: true,
   });
 
   res.json({ message: "Cookies Set" });
