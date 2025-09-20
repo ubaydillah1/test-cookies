@@ -18,6 +18,11 @@ app.get("/", (req: Request, res: Response) => {
     secure: true,
   });
 
+  app.get("/profile", (req, res) => {
+    const token = req.cookies?.token || null;
+    res.json({ token });
+  });
+
   res.json({ message: "Cookies Set" });
 });
 
