@@ -11,7 +11,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "*", // FE domain
+    origin: [
+      "https://e-learning-test-online.vercel.app",
+      "http://localhost:3000",
+    ], // FE domain
     credentials: true,
   })
 );
