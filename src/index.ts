@@ -9,7 +9,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://e-learning-test-online.vercel.app",
+    origin: "*",
     credentials: true,
   })
 );
