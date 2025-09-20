@@ -17,7 +17,7 @@ app.use(
 );
 
 // Route set cookie
-app.get("/set-cookie", (req: Request, res: Response) => {
+app.post("/set-cookie", (req: Request, res: Response) => {
   res.cookie("token", "123456", {
     httpOnly: true,
     sameSite: "none",
