@@ -18,6 +18,7 @@ app.get("/", (req: Request, res: Response) => {
   res.cookie("token", "123456", {
     httpOnly: true,
     sameSite: "none",
+    domain: ".vercel.app",
     secure: true,
   });
 
